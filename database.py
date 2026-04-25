@@ -1,7 +1,7 @@
 import sqlite3
 import os
 
-DB_PATH = 'medicines.db'
+DB_PATH = '/tmp/medicines.db'
 
 def init_db():
     conn = sqlite3.connect(DB_PATH)
@@ -18,7 +18,6 @@ def init_db():
         )
     ''')
     
-    # Sample data
     sample_data = [
         ('Crocin', 'Paracetamol', 30, 5, 'জ্বর ও মাথাব্যথা', 'বমি বমি ভাব'),
         ('Dolo 650', 'Paracetamol', 35, 5, 'জ্বর ও মাথাব্যথা', 'বমি বমি ভাব'),
@@ -60,5 +59,4 @@ def search_medicine(name):
     conn.close()
     return results
 
-# Initialize database when imported
 init_db()
