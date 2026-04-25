@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ওষুধ খোঁজার অ্যাপ</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>💊 ওষুধ খোঁজার অ্যাপ</h1>
+            <p>ব্র্যান্ডেড ওষুধের সস্তা জেনেরিক বিকল্প খুঁজুন</p>
+        </div>
+
+        <div class="search-box">
+            <form action="/search" method="POST">
+                <input 
+                    type="text" 
+                    name="medicine_name" 
+                    placeholder="ওষুধের নাম লিখুন... যেমন: Crocin, Paracetamol"
+                    required
+                >
+                <button type="submit">🔍 খুঁজুন</button>
+            </form>
+        </div>
+
+        <div class="info-box">
+            <h3>💡 কিভাবে ব্যবহার করবেন?</h3>
+            <p>১. ওষুধের নাম লিখুন (বাংলা বা ইংরেজি)</p>
+            <p>২. খুঁজুন বাটনে ক্লিক করুন</p>
+            <p>৩. সস্তা বিকল্প দেখুন এবং টাকা বাঁচান!</p>
+        </div>
+
+        <div class="popular">
+            <h3>🔥 জনপ্রিয় ওষুধ</h3>
+            <div class="tags">
+                <span>Crocin</span>
+                <span>Paracetamol</span>
+                <span>Combiflam</span>
+                <span>Omez</span>
+                <span>Allegra</span>
+                <span>Metformin</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
