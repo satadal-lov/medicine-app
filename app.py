@@ -1,7 +1,10 @@
 from flask import Flask, render_template, request
-from database import search_medicine
+from database import search_medicine, init_db
 
 app = Flask(__name__)
+
+with app.app_context():
+    init_db()
 
 @app.route('/')
 def home():
